@@ -1,0 +1,8 @@
+<strong style="text-align: center; font-size: 1.3em;">Nuestra propuesta pedagógica</strong><br>
+<br>
+
+<p>En ACEEMM entendemos la educación artística como un espacio de encuentro, disfrute y desarrollo humano. Creemos que la música y el arte fortalecen la sensibilidad, la creatividad y la construcción de entornos más empáticos y felices. Nuestros procesos educativos se basan en pedagogías alternativas que reconocen las particularidades de cada estudiante, así como el valor de la experiencia artística compartida.</p>
+
+<p>A través de clases individuales, espacios de ensamble y experiencias artísticas colectivas, acompañamos el desarrollo musical en sus dimensiones técnica, interpretativa, rítmica, auditiva y somática. Promovemos, además, una articulación cercana entre estudiantes, cuidadores y docentes, entendiendo que el acompañamiento familiar y pedagógico fortalece profundamente los procesos de aprendizaje.</p>
+
+<p>Conoce nuestros programas de formación en la sección <a href="#" onclick="showSection(4); return false;" class="footer-link">Nuestras clases</a>.</p>
