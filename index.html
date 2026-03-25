@@ -387,7 +387,7 @@
 
         .class-btn:hover::before { opacity: 1; }
         .class-btn:hover { transform: translateY(-15px) scale(1.05); }
-
+        
         /* DOCENTES */
         #teachers-container {
             display: flex;
@@ -618,8 +618,7 @@
         ======================================== */
         [data-text^="inicio"], 
         [data-text^="asociacion"], 
-        [data-text^="proyectos"], 
-        [data-text="clases"] {
+        [data-text^="proyectos"] {
             background-size: cover;
             background-position-y: 35%;
             background-position-x: center;
@@ -646,7 +645,17 @@
         [data-text="proyectos3"] { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagenes/fondo_proyectos3.jpg'); }
         [data-text="proyectos4"] { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagenes/fondo_proyectos4.jpg'); }
         [data-text="proyectos5"] { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagenes/fondo_proyectos5.jpg'); }
-        [data-text="clases"] { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagenes/fondo_clases.jpg'); }
+        
+        [data-text="clases"] { 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagenes/fondo_clases.jpg'); 
+            padding: 45px 80px;
+            background-size: cover;
+            background-position-y: 60%;
+            background-position-x: center;
+            background-attachment: fixed;
+            text-align: center;
+            height: 200px;
+        }
         
         [data-clase="estimulacion"], [data-clase="instrumento"] { text-align: center; }
         [data-clase="ensamble"] { background-position-x: 25%; text-align: center; }
@@ -684,10 +693,11 @@
             [data-text^="inicio"], [data-text^="asociacion"], [data-text^="proyectos"] {
                 font-size: 1.7vh;
                 padding: 1.7vh;
+                height: 1.7vh;
             }
             [data-text="clases"], [data-text="docentes"] {
-                font-size: 1.9vh;
-                padding: 1.1vh;
+                font-size: 1.7vh;
+                padding: 0.7vh;
             }
         }
     </style>
