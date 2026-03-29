@@ -1129,6 +1129,15 @@
 
             const fetchPromises = [];
 
+            // Función de validación para detectar si el servidor nos engañó con un HTML
+            const validateContent = (content) => {
+                const textStr = content.trim().toLowerCase();
+                if (textStr.startsWith('<!doctype') || textStr.startsWith('<html')) {
+                    throw new Error("El servidor devolvió un HTML (Falso 200 OK). Archivo no encontrado.");
+                }
+                return content;
+            };
+
             // Fetch secciones
             for (let [key, file] of Object.entries(textFiles)) {
                 fetchPromises.push(
@@ -1137,11 +1146,12 @@
                             if (!res.ok) throw new Error(`Error HTTP: ${res.status}`);
                             return res.text();
                         })
+                        .then(validateContent)
                         .then(htmlContent => {
                             document.querySelectorAll(`[data-text="${key}"]`).forEach(el => el.innerHTML = htmlContent);
                         })
                         .catch(e => {
-                            console.warn(`Archivo no encontrado o error de red: ${file}`, e);
+                            console.warn(`Error en sección ${key}:`, e.message);
                             document.querySelectorAll(`[data-text="${key}"]`).forEach(el => el.innerHTML = "Contenido no disponible.");
                         })
                 );
@@ -1155,12 +1165,13 @@
                             if (!res.ok) throw new Error(`Error HTTP: ${res.status}`);
                             return res.text();
                         })
+                        .then(validateContent)
                         .then(content => {
                             clasesData[key].texto = content;
                         })
                         .catch(e => {
-                            console.warn(`Error cargando texto de clase: ${key}`, e);
-                            clasesData[key].texto = "<p style='text-align:center;'>Información de la clase no disponible por el momento.</p>";
+                            console.warn(`Error en clase ${key}:`, e.message);
+                            clasesData[key].texto = "<p style='text-align:center;'>Información no disponible por el momento.</p>";
                         })
                 );
             }
@@ -1173,11 +1184,12 @@
                             if (!res.ok) throw new Error(`Error HTTP: ${res.status}`);
                             return res.text();
                         })
+                        .then(validateContent)
                         .then(content => {
                             teachersData[key].bio = content;
                         })
                         .catch(e => {
-                            console.warn(`Error cargando biografía de docente: ${key}`, e);
+                            console.warn(`Error en docente ${key}:`, e.message);
                             teachersData[key].bio = "<p style='text-align:center;'>Biografía no disponible por el momento.</p>";
                         })
                 );
