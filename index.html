@@ -36,7 +36,7 @@
             font-family: 'Lato', sans-serif;
             font-weight: 480;
             overflow-x: hidden;
-            background: rgb(93, 2, 2);
+            background: #a90303ff;
             color: rgba(255, 255, 255, 0.9);
             display: flex !important;
             flex-direction: column !important;
@@ -59,7 +59,7 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            background: rgb(93, 2, 2);
+            background: #121212;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -99,7 +99,7 @@
             top: 0 !important;
             width: 100% !important;
             height: 45px !important;
-            background: rgba(93, 2, 2, 0.497) !important;
+            background: rgba(18, 18, 18, 0.423) !important;
             border: none;
             backdrop-filter: blur(20px) !important;
             z-index: 1000 !important;
@@ -107,7 +107,7 @@
             align-items: center !important;
             justify-content: space-between !important;
             padding: 0 15px !important;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1) !important;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08) !important;
         }
         .header-image {
             height: 40px;
@@ -162,8 +162,9 @@
 
         #nav-toggle:hover {
             transform: scale(1.1);
-            background: rgba(169, 3, 3, 0.548);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            background: rgba(169, 3, 3, 0.2); 
+            border: 1px solid #a90303;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
         #nav-menu {
@@ -173,7 +174,7 @@
             width: 100%;
             max-width: 350px;
             height: calc(100vh - 80px);
-            background: rgba(169, 3, 3, 0.75);
+            background: rgba(26, 26, 26, 0.95);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -196,16 +197,16 @@
             cursor: pointer;
             font-size: 18px;
             transition: all 0.3s ease;
-            border-bottom: 1px solid rgb(253, 244, 244);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         #nav-menu li:hover {
             padding-left: 20px;
-            color: rgb(79, 4, 4);
+            color: #A90303;
         }
 
         #nav-menu li.active {
-            color: rgb(255, 202, 202);
+            color: #A90303; border-right: 4px solid #A90303;
             font-weight: bold;
         }
 
@@ -225,7 +226,7 @@
             min-height: calc(100vh - 450px);
             padding: 60px 30px 120px 30px !important;
             z-index: 10 !important;
-            background: #a90303ff;
+            background: transparent;
             border-radius: 15px;
             opacity: 0;
             transform: translateY(40px);
@@ -236,11 +237,7 @@
             z-index: 20 !important;
             animation: fadeInUp 0.5s ease forwards;
         }
-        
-        .section.section-grid.active {
-            display: grid !important;
-        }
-        
+            
         .section.no-logote {
             margin: 45px auto 0 auto !important;
             padding-top: 80px !important;
@@ -254,27 +251,21 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* LAYOUTS DE SECCIONES */
-        .section-grid {
-            display: grid;
-            gap: 50px;
-            margin-top: 40px;
-        }
-
         .section-title {
-            font-size: clamp(2em, 5vw, 2.6em);
+            font-size: clamp(2em, 5vw, 3em);
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 75px;
             color: rgb(255, 255, 255);
         }
 
         .text-box {
-            background: #a90303ff;
+            background: #ffffff0e; 
             padding: 35px;
             border-radius: 16px;
             box-shadow: 0 15px 50px rgba(0,0,0,0.08);
             line-height: 1.8;
             transition: all 0.4s ease;
+            text-align: center;
         }
 
         .text-box:hover {
@@ -296,22 +287,52 @@
             transform: scale(1.03);
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
         }
+
+        /* ========================================
+           LAYOUT ZIG-ZAG (Secciones 1, 2 y 5)
+        ======================================== */
+        .zig-zag-row {
+            display: flex;
+            align-items: stretch; /* Hace que imagen y texto tengan la misma altura */
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .zig-zag-row.reverse {
+            flex-direction: row-reverse; /* Esto es lo que invierte el orden (Texto - Imagen) */
+        }
+
+        .zig-zag-img {
+            flex: 1;
+            min-height: 350px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 16px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+        }
+
+        .zig-zag-img:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+
+        /* Hacemos que la caja de texto ocupe la otra mitad */
+        .zig-zag-row .text-box {
+            flex: 1;
+            margin: 0; /* Quitamos márgenes extra para que alinee perfecto */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centra el texto verticalmente */
+        }
+
         #main-content.no-logote-layout {
             padding-top: 45px !important;
         }
 
-        /* VARIACIONES LAYOUT */
-        #seccion1 .section-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto 1fr; }
-        #seccion1 .section-image:nth-child(5) { grid-column: 1 / -1; height: 450px; }
-
-        #seccion2 .section-grid { grid-template-columns: 2fr 1fr; grid-template-rows: 1fr auto; }
-        #seccion2 .section-image:nth-child(3) { grid-row: 1 / -1; }
-
-        #seccion5 .section-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr); gap: 30px; }
-
         /* INSTAGRAM */
         .instagram-container {
-            background: white;
+            background: #1E1E1E;
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.1);
@@ -330,19 +351,6 @@
             max-width: 100% !important;
             width: 100% !important;
             margin: 0 !important;
-        }
-
-        .instagram-btn {
-            display: inline-block;
-            padding: 18px 36px;
-            font-size: 18px;
-            background: linear-gradient(135deg, #a90303ff, #c53030);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(169,3,3,0.3);
-            text-decoration: none;
         }
 
         /* CLASES */
@@ -369,18 +377,18 @@
             color: rgb(255, 255, 255);
             font-size: 1.8em;
             font-weight: bold;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
             cursor: pointer;
             transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
         }
 
         .class-btn::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(174, 0, 0, 0.582);
+            background: rgba(169, 3, 3, 0.7);;
             opacity: 0;
             transition: opacity 0.4s ease;
         }
@@ -413,7 +421,7 @@
             scroll-snap-align: center;
             transition: all 0.5s ease;
             position: relative;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
         }
 
         .teacher-card:hover { transform: scale(1.08) translateY(-10px); }
@@ -423,7 +431,7 @@
             bottom: 25px;
             left: 25px;
             right: 25px;
-            background: rgba(0, 0, 0, 0.186);
+            background:rgba(0, 0, 0, 0.6);;
             color: white;
             padding: 15px;
             border-radius: 16px;
@@ -459,8 +467,8 @@
         }
 
         .nav-arrow:hover {
-            background: rgba(255, 255, 255, 0.9);
-            color: #a90303ff;
+            color: #ffffff; 
+            background: #a90303;
             transform: translateY(-50%) scale(1.1);
         }
 
@@ -487,8 +495,8 @@
             padding: 20px;
         }
         
-        #teacher-modal { background: rgba(0, 0, 0, 0.379); }
-        #class-modal { background: rgba(0, 0, 0, 0.46); z-index: 9998; }
+        #teacher-modal { background: rgba(0, 0, 0, 0.8); }
+        #class-modal { background: rgba(0, 0, 0, 0.8); z-index: 9998; }
 
         .modal-content, .class-modal-content {
             border-radius: 24px;
@@ -499,13 +507,13 @@
         }
         
         .modal-content {
-            background: rgb(159, 38, 38);
+            background: #1E1E1E; border: 1px solid #333;
             max-width: 700px;
             max-height: 85vh;
         }
 
         .class-modal-content {
-            background: rgb(170, 32, 32);
+            background: #1E1E1E; border: 1px solid #333;
             max-width: 800px;
             height: auto;
             max-height: 85vh;
@@ -559,21 +567,21 @@
             position: absolute;
             top: 25px;
             right: 30px;
-            background: #ffffff;
-            color: #a90303ff;
+            background: #333333; color: #ffffff;
             border: none;
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            font-size: 20px;
+            font-size: 15px;
+            text-align: center;
             cursor: pointer;
             z-index: 10000;
             transition: all 0.3s ease;
         }
 
         .modal-close:hover {
-            background: rgb(176, 137, 137);
-            transform: scale(1.15);
+            background: #a90303;
+            transform: scale(1.08);
         }
         #seccion7 .section-image {
             background-position-y: 64%;
@@ -590,7 +598,7 @@
             bottom: 0 !important;
             left: 0 !important;
             width: 100% !important;
-            background: linear-gradient(135deg, rgb(111, 1, 1), #a90303ff) !important;
+            background: #0A0A0A !important; border-top: 3px solid #a90303;
             color: white !important;
             z-index: 900 !important;
             padding: 25px 30px !important;
@@ -610,41 +618,9 @@
             line-height: 1.6;
         }
 
-        .footer-link { color: rgb(244, 160, 160); text-decoration: none; transition: all 0.3s ease; }
-        .footer-link:hover { color: rgb(255, 255, 255); text-decoration: underline; }
+        .footer-link { color: #a90303; text-decoration: none; transition: all 0.3s ease; }
+        .footer-link:hover { color: #ffffff; text-decoration: underline; }
 
-        /* ========================================
-           OPTIMIZACIÓN: ESTILOS COMPARTIDOS PARA FONDOS
-        ======================================== */
-        [data-text^="inicio"], 
-        [data-text^="asociacion"], 
-        [data-text^="proyectos"] {
-            background-size: cover;
-            background-position-x: center;
-            background-attachment: fixed;
-            text-align: center;
-            line-height: 1.8;
-            color: white;
-            border-radius: 15px;
-            padding: 60px 80px;
-            min-height: 290px;
-        }
-
-        /* Ajustes de fuente según la sección */
-        [data-text^="inicio"], [data-text^="asociacion"], [data-text^="proyectos"] { font-size: 1.1rem; }
-        [data-text="clases"], [data-text="docentes"] { font-size: 1.2rem; }
-
-        /* Imágenes específicas */
-        [data-text="inicio1"] { background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('imagenes/fondo_inicio1.webp'); background-position-y: 25%; }
-        [data-text="inicio2"] { background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('imagenes/fondo_inicio2.webp'); background-position-y: 30%;}
-        [data-text="asociacion1"] { background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('imagenes/fondo_asociacion1.webp'); background-position-y: 38%; }
-        [data-text="asociacion2"] { background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('imagenes/fondo_asociacion2.webp'); background-position-y: 50%;}
-        [data-text="proyectos1"] { background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('imagenes/fondo_proyectos1.webp'); }
-        [data-text="proyectos2"] { background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('imagenes/fondo_proyectos2.webp'); }
-        [data-text="proyectos3"] { background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('imagenes/fondo_proyectos3.webp'); }
-        [data-text="proyectos4"] { background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('imagenes/fondo_proyectos4.webp'); }
-        [data-text="proyectos5"] { background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('imagenes/fondo_proyectos5.webp'); }
-        
         [data-text="clases"] { 
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagenes/fondo_clases.webp'); 
             padding: 45px 80px;
@@ -667,6 +643,15 @@
             .header-image {height: 2.6vh; }
             #logote { height: 135px; top: 40px; }
             #logote video {height: 110px; left: -35px;}
+            /* Ajustes móviles para el zig-zag */
+            .zig-zag-row, .zig-zag-row.reverse {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .zig-zag-img {
+                min-height: 250px;
+                width: 100%;
+            }
             #main-content { padding-top: 0 !important; } 
 
             .section { 
@@ -701,7 +686,9 @@
         }
     </style>
 </head>
+
 <body>
+
     <div id="loading-screen">
         <div id="loading-video">
             <video autoplay muted loop playsinline class="video-loader-element">
@@ -713,7 +700,7 @@
 
     <div id="header">
         <div class="header-image" style="background-image:url('imagenes/envivo_header.webp');"></div>
-        <button id="nav-toggle" style="color: rgba(255, 255, 255, 0.638); font-size: 1.8em;">☰</button>
+        <button id="nav-toggle" style="color: #ffffff; font-size: 1.8em;">☰</button>
         <nav id="nav-menu">
             <ul>
                 <li data-section="1" class="nav-item active">Inicio</li>
@@ -740,16 +727,32 @@
     </div>
 
     <main id="main-content">
-        <section id="seccion1" class="section section-grid active">
+
+        <section id="seccion1" class="section active">
             <h1 class="section-title">EnVivo</h1>
-            <div class="text-box" data-text="inicio1"></div>
-            <div class="text-box" data-text="inicio2"></div>
+            <div class="zig-zag-row">
+                <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_inicio1.webp');"></div>
+                <div class="text-box" data-text="inicio1"></div>
+            </div>
+
+            <div class="zig-zag-row reverse">
+                <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_inicio2.webp');"></div>
+                <div class="text-box" data-text="inicio2"></div>
+            </div>
         </section>
 
-        <section id="seccion2" class="section section-grid">
+        <section id="seccion2" class="section">
             <h1 class="section-title">La Asociación</h1>
-            <div class="text-box" data-text="asociacion1"></div>
-            <div class="text-box" data-text="asociacion2"></div>
+            
+            <div class="zig-zag-row">
+                <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_asociacion1.webp');"></div>
+                <div class="text-box" data-text="asociacion1"></div>
+            </div>
+            
+            <div class="zig-zag-row reverse">
+                <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_asociacion2.webp');"></div>
+                <div class="text-box" data-text="asociacion2"></div>
+            </div>
         </section>
         
         <section id="seccion3" class="section">
@@ -787,13 +790,33 @@
             </div>
         </section>
 
-        <section id="seccion5" class="section section-grid">
+        <section id="seccion5" class="section">
             <h1 class="section-title">Proyectos de creación: pedagogía, arte y territorio</h1>
-            <div class="text-box" data-text="proyectos1"></div>
-            <div class="text-box" data-text="proyectos2"></div>
-            <div class="text-box" data-text="proyectos3"></div>
-            <div class="text-box" data-text="proyectos4"></div>
-            <div class="text-box" data-text="proyectos5"></div>
+            
+            <div class="zig-zag-row">
+                <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_proyectos1.webp');"></div>
+                <div class="text-box" data-text="proyectos1"></div>
+            </div>
+            
+            <div class="zig-zag-row reverse">
+                <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_proyectos2.webp');"></div>
+                <div class="text-box" data-text="proyectos2"></div>
+            </div>
+            
+            <div class="zig-zag-row">
+                <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_proyectos3.webp');"></div>
+                <div class="text-box" data-text="proyectos3"></div>
+            </div>
+            
+            <div class="zig-zag-row reverse">
+                <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_proyectos4.webp');"></div>
+                <div class="text-box" data-text="proyectos4"></div>
+            </div>
+            
+            <div class="zig-zag-row">
+                <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_proyectos5.webp');"></div>
+                <div class="text-box" data-text="proyectos5"></div>
+            </div>
         </section>
 
         <section id="seccion6" class="section">
@@ -861,8 +884,8 @@
 
         <section id="seccion8" class="section">
             <h1 class="section-title">Estados de Cuenta</h1>
-            <div id="pdf-list" style="background:white;padding:40px;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.1);">
-                <a href="estados_de_cuenta/estado_enero_2026.pdf" target="_blank" style="display:block;padding:20px;background:#3498db;color:white;text-decoration:none;border-radius:12px;margin:15px 0;transition:all 0.3s;">📄 Enero 2026</a>
+            <div id="pdf-list" style="background:#1e1e1e;padding:40px;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.1);">
+                <a href="estados_de_cuenta/estado_enero_2026.pdf" target="_blank" style="display:block;padding:20px;background:#a90303;color:white;text-decoration:none;border-radius:12px;margin:15px 0;transition:all 0.3s;">📄 Enero 2026</a>
             </div>
         </section>
     </main>
@@ -923,10 +946,11 @@
         };
 
         // INICIALIZACIÓN
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loading-screen').classList.add('fade-out');
-            }, 2500);
+       window.addEventListener('load', () => {
+            // Se ejecuta apenas todos los recursos (imágenes, iframes) han cargado
+            const loader = document.getElementById('loading-screen');
+            loader.classList.add('fade-out');
+            setTimeout(() => { loader.style.display = 'none'; }, 800); // Limpieza del DOM
         });
 
         // MENÚ HAMBURGUESA
