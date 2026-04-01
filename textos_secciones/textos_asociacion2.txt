@@ -5,4 +5,8 @@
 
 <p>A través de clases individuales, espacios de ensamble y experiencias artísticas colectivas, acompañamos el desarrollo musical en sus dimensiones técnica, interpretativa, rítmica, auditiva y somática. Promovemos, además, una articulación cercana entre estudiantes, cuidadores y docentes, entendiendo que el acompañamiento familiar y pedagógico fortalece profundamente los procesos de aprendizaje.</p>
 
-<p>Conoce nuestros programas de formación en la sección <a href="#" onclick="showSection(4); return false;" class="footer-link">Nuestras clases</a>.</p>
+<p>Conoce nuestros programas de formación en la sección 
+   <a href="#" onclick="showSection(4); return false;" class="footer-link" style="color: #f19047;">
+      Nuestras clases
+   </a>.
+</p>

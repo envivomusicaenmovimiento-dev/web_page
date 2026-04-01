@@ -26,8 +26,8 @@
         }
 
         html, body {
-            height: 100% !important;
-            margin: 0 !important;
+            height: 100%;
+            margin: 0;
         }
 
         body {
@@ -38,9 +38,9 @@
             overflow-x: hidden;
             background: #a90303ff;
             color: rgba(255, 255, 255, 0.9);
-            display: flex !important;
-            flex-direction: column !important;
-            min-height: 100vh !important;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
             position: relative;
         }
         /* Aplica la fuente de "impacto" a los títulos */
@@ -95,19 +95,19 @@
            HEADER Y NAVEGACIÓN
         ======================================== */
         #header {
-            position: fixed !important;
-            top: 0 !important;
-            width: 100% !important;
-            height: 45px !important;
-            background: rgba(18, 18, 18, 0.423) !important;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 45px;
+            background: rgba(18, 18, 18, 0.423);
             border: none;
-            backdrop-filter: blur(20px) !important;
-            z-index: 1000 !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            padding: 0 15px !important;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08) !important;
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
         }
         .header-image {
             height: 40px;
@@ -121,7 +121,7 @@
 
         #logote {
             position: fixed;
-            top: 45px !important;
+            top: 45px;
             left: 0;
             width: 100%;
             height: 210px;
@@ -132,7 +132,7 @@
         }
 
         #logote.slide-up {
-            transform: translateY(-210px) !important;
+            transform: translateY(-210px);
         }
 
         #logote video {
@@ -219,13 +219,13 @@
         }
 
         .section {
-            display: none !important;
-            margin: 255px auto 0 auto !important;
-            width: 100% !important;
-            max-width: 1200px !important;
+            display: none;
+            margin: 255px auto 0 auto;
+            width: 100%;
+            max-width: 1200px;
             min-height: calc(100vh - 450px);
-            padding: 60px 30px 120px 30px !important;
-            z-index: 10 !important;
+            padding: 60px 30px 120px 30px;
+            z-index: 10;
             background: transparent;
             border-radius: 15px;
             opacity: 0;
@@ -233,14 +233,14 @@
         }
 
         .section.active {
-            display: block !important;
-            z-index: 20 !important;
+            display: block;
+            z-index: 20;
             animation: fadeInUp 0.5s ease forwards;
         }
             
         .section.no-logote {
-            margin: 45px auto 0 auto !important;
-            padding-top: 80px !important;
+            margin: 45px auto 0 auto;
+            padding-top: 80px;
         }
         
         .section.text-box {
@@ -327,7 +327,7 @@
         }
 
         #main-content.no-logote-layout {
-            padding-top: 45px !important;
+            padding-top: 45px;
         }
 
         /* INSTAGRAM */
@@ -346,6 +346,7 @@
             justify-items: center;
         }
 
+        /* EXCEPCIÓN: Mantenemos los !important aquí para sobreescribir los estilos inline que inyecta el script externo de Instagram */
         .instagram-media, iframe.instagram-media {
             min-width: 100% !important;
             max-width: 100% !important;
@@ -364,6 +365,7 @@
         }
 
         .class-btn {
+            z-index: 1;
             position: relative;
             width: 100%;
             height: 100%;
@@ -391,6 +393,7 @@
             background: rgba(169, 3, 3, 0.7);;
             opacity: 0;
             transition: opacity 0.4s ease;
+            z-index: -1;
         }
 
         .class-btn:hover::before { opacity: 1; }
@@ -594,17 +597,17 @@
 
         /* FOOTER */
         #footer {
-            position: fixed !important;
-            bottom: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
-            background: #0A0A0A !important; border-top: 3px solid #a90303;
-            color: white !important;
-            z-index: 900 !important;
-            padding: 25px 30px !important;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #0A0A0A; border-top: 3px solid #a90303;
+            color: white;
+            z-index: 900;
+            padding: 25px 30px;
             opacity: 0;
             visibility: hidden;
-            transition: all 0.5s ease !important;
+            transition: all 0.5s ease;
         }
 
         .footer-full { padding: 60px 40px; }
@@ -622,20 +625,17 @@
         .footer-link:hover { color: #ffffff; text-decoration: underline; }
 
         [data-text="clases"] { 
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('imagenes/fondo_clases.webp'); 
-            padding: 45px 80px;
-            background-size: cover;
-            background-position-y: 60%;
-            background-position-x: center;
-            background-attachment: fixed;
+            background-color: transparent;
             text-align: center;
-            height: 200px;
+        }
+
+        [data-text="docentes"] { 
+            text-align: center; 
+            background-color: transparent; 
         }
         
         [data-clase="estimulacion"], [data-clase="instrumento"] { text-align: center; }
         [data-clase="ensamble"] { background-position-x: 25%; text-align: center; }
-        
-        [data-text="docentes"] { text-align: center; color: white; border-radius: 15px; }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
@@ -652,13 +652,13 @@
                 min-height: 250px;
                 width: 100%;
             }
-            #main-content { padding-top: 0 !important; } 
+            #main-content { padding-top: 0; } 
 
             .section { 
-                margin: 170px auto 30px auto !important;
-                padding: 40px 20px 100px 20px !important; 
+                margin: 170px auto 30px auto;
+                padding: 40px 20px 100px 20px; 
             }
-            .section.no-logote { margin: 40px auto 0 auto !important; }
+            .section.no-logote { margin: 40px auto 0 auto; }
             
             #nav-menu { width: 100%; max-width: none; }
             .class-buttons { grid-template-columns: 1fr; height: auto; }
@@ -688,7 +688,6 @@
 </head>
 
 <body>
-
     <div id="loading-screen">
         <div id="loading-video">
             <video autoplay muted loop playsinline class="video-loader-element">
@@ -800,7 +799,7 @@
             </div>
             
             <div class="zig-zag-row reverse">
-                <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_proyectos2.webp');"></div>
+                <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_proyectos2.webp'); background-size: 115%; background-repeat: no-repeat; background-position: -50px center;"></div>
                 <div class="text-box" data-text="proyectos2"></div>
             </div>
             
@@ -815,7 +814,7 @@
             </div>
             
             <div class="zig-zag-row">
-                <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_proyectos5.webp');"></div>
+                <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_proyectos5.webp'); background-position-x: -30px;"></div>
                 <div class="text-box" data-text="proyectos5"></div>
             </div>
         </section>
@@ -855,6 +854,22 @@
                     <div class="teacher-card" style="background-image:url('fotos_docentes/docente9.webp');" data-teacher="9">
                         <div class="teacher-name">Laura Valentina Cárdenas</div>
                     </div>
+                    <div class="teacher-card" style="background-image:url('fotos_docentes/docente9.webp');" data-teacher="9">
+                        <div class="teacher-name">Henry Ramírez</div>
+                    </div>
+                    <div class="teacher-card" style="background-image:url('fotos_docentes/docente9.webp');" data-teacher="9">
+                        <div class="teacher-name">Karen Lagos</div>
+                    </div>
+                    <div class="teacher-card" style="background-image:url('fotos_docentes/docente9.webp');" data-teacher="9">
+                        <div class="teacher-name">John Esteban Bernal</div>
+                    </div>
+                    <div class="teacher-card" style="background-image:url('fotos_docentes/docente9.webp');" data-teacher="9">
+                        <div class="teacher-name">José Guillermo Ospina</div>
+                    </div>
+                    <div class="teacher-card" style="background-image:url('fotos_docentes/docente9.webp');" data-teacher="9">
+                        <div class="teacher-name">Lucila Sánchez</div>
+                    </div>
+
                 </div>
 
                 <button class="nav-arrow right-arrow" onclick="scrollTeachers(1)">&#10095;</button>
@@ -937,7 +952,8 @@
             10: { name: "Henry Ramírez", img: "fotos_docentes/modal_docente10.webp", bio: "textos_modales/bio_docente10.txt" },
             11: { name: "Karen Lagos", img: "fotos_docentes/modal_docente11.webp", bio: "textos_modales/bio_docente11.txt" },
             12: { name: "John Esteban Bernal", img: "fotos_docentes/modal_docente12.webp", bio: "textos_modales/bio_docente12.txt" },
-            13: { name: "José Guillermo Ospina", img: "fotos_docentes/modal_docente13.webp", bio: "textos_modales/bio_docente13.txt" }
+            13: { name: "José Guillermo Ospina", img: "fotos_docentes/modal_docente13.webp", bio: "textos_modales/bio_docente13.txt" },
+            14: { name: "Lucila Sánchez", img: "fotos_docentes/modal_docente14.webp", bio: "textos_modales/bio_docente14.txt" }
         };
 
         const clasesData = {
@@ -1065,7 +1081,9 @@
             document.getElementById('teacher-modal').style.display = 'flex';
             const teacherContent = document.querySelector('.modal-content');
             if (teacherContent) teacherContent.scrollTop = 0;
-            document.body.style.setProperty('overflow', 'hidden', 'important');
+            
+            // Reemplazado !important en JS por la propiedad estándar
+            document.body.style.overflow = 'hidden';
         }
 
         function showClassModal(claseId) {
@@ -1135,7 +1153,7 @@
              });
         });
 
-        // ========== SISTEMA DE TEXTOS EXTERNOS (Optimizado con Promise.all) ==========
+        // ========== SISTEMA DE TEXTOS EXTERNOS ==========
         async function loadTextFiles() {
             const textFiles = {
                 'inicio1': 'textos_secciones/textos_inicio1.txt',
