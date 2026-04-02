@@ -13,7 +13,6 @@
 
 <br>
 
-<p>Áreas: piano, ensambles, iniciación, estimulación y aprestamiento musical (avanzado)
-<br>
-Otros: guitarra, batería, ukelele, viola (intermedio); bajo y violín (iniciación)</p>
+<p>Áreas: piano, ensambles, iniciación, estimulación y aprestamiento musical (avanzado)</p>
+<p>Otros: guitarra, batería, ukelele, viola (intermedio); bajo y violín (iniciación)</p>
 </div>

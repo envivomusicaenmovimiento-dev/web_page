@@ -1,0 +1,15 @@
+<div style="text-align: center;">
+
+<p>Guitarrista y docente, licenciado en Música con énfasis en interpretación de la guitarra.</p>
+
+<br>
+
+<p>Su experiencia abarca la enseñanza en el área de instrumento principal e iniciación musical con personas de todas las edades, incluyendo experiencia en educación para personas con discapacidad visual.</p>
+<br>
+<br>
+
+<p>Áreas: Guitarra (avanzado)
+<br>
+Otros: iniciación musical (intermedio); Bajo, ukelele y piano (iniciación)
+</p>
+</div>

@@ -1,0 +1,14 @@
+<div style="text-align: center;">
+
+<p>Estudiante de Licenciatura en Música con énfasis en interpretación del violín.</p>
+
+<br>
+
+<p>Guía experiencias de formación instrumental e iniciación musical, integrando dimensiones técnicas, sensibles, motoras, rítmicas y auditivas para cultivar una vivencia musical profunda.</p>
+<br>
+<br>
+
+<p>Áreas: Violín, iniciación musical (avanzado)
+<br>
+Otros: Piano (iniciación)</p>
+</div>

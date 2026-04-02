@@ -1,0 +1,14 @@
+<div style="text-align: center;">
+
+<p>Licenciado en Música con énfasis en interpretación de la guitarra.</p>
+
+<br>
+
+<p>Desarrolla procesos de formación instrumental, iniciación musical y trabajo en ensamble, garantizando experiencias musicales individuales y colectivas, conscientes y de calidad.</p>
+<br>
+<br>
+
+<p>Áreas: Guitarra, dirección de ensambles (avanzado)
+<br>
+Otras: Bajo, iniciación musical (intermedio), batería y piano (iniciación)</p>
+</div>

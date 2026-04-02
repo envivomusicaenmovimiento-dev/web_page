@@ -1,0 +1,15 @@
+<div style="text-align: center;">
+
+<p>Cantante y pedagoga, maestra en música con énfasis en interpretación del canto.
+</p>
+
+<br>
+
+<p>Cuenta con amplia experiencia en formación vocal e iniciación musical con estudiantes de todas las edades. Orienta el aprendizaje en modalidad virtual a través de metodologías innovadoras y sensibles.</p>
+<br>
+<br>
+
+<p>Áreas: Canto, iniciación musical (avanzado)
+<br>
+Otras: Piano, estimulación musical y musicoterapia (intermedio)</p>
+</div>

@@ -1,9 +1,5 @@
 <div style="text-align: center;">
 
-<strong style="font-size: 1.3em;">Canto | Ensambles | Estimulación e iniciación musical</strong>
-<br>
-<br>
-
 <p>Cantante y pedagoga. Licenciada en Música y Magíster en Música con énfasis en interpretación del canto. Directora y fundadora de ACEEMM.</p>
 
 <br>
@@ -12,7 +8,6 @@
 Cuenta con amplia experiencia en el trabajo con primeras infancias y procesos colectivos, desde una mirada pedagógica que integra enfoques alternativos y reconoce los intereses, motivaciones y particularidades de cada estudiante.</p>
 <br>
 
-<p>Áreas: canto, iniciación, estimulación y aprestamiento musical, dirección de ensambles (avanzado)
-<br>
-Otros: piano (intermedio), guitarra y ukelele (iniciación)</p>
+<p>Áreas: canto, iniciación, estimulación y aprestamiento musical, dirección de ensambles (avanzado)</p>
+<p>Otros: piano (intermedio), guitarra y ukelele (iniciación)</p>
 </div>

@@ -1,0 +1,14 @@
+<div style="text-align: center;">
+
+<p>Pianista y docente, Maestra en Música con énfasis en interpretación del piano.</p>
+
+<br>
+
+<p>Su práctica pedagógica se desarrolla en torno a procesos de iniciación musical y profundización instrumental en piano, promoviendo una formación sólida y expresiva.</p>
+<br>
+<br>
+
+<p>Áreas: Piano (avanzado)
+<br>
+Otros: iniciación musical (intermedio)</p>
+</div>
