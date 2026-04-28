@@ -1,10 +1,5 @@
 <div style="text-align: center;">
 
-<strong style="font-size: 1.3em;">Piano |  Ensambles | Iniciación musical</strong>
-<br>
-<br>
-
-
 <p>Pianista y pedagogo, licenciado en Música y magíster en Música con énfasis en interpretación del piano. Director y fundador de ACEEMM.</p>
 
 <br>
