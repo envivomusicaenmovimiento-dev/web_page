@@ -1,14 +1,15 @@
 <div style="text-align: center;">
 
-<p>Licenciado en Música con énfasis en interpretación de la guitarra.</p>
+<p>Cantante y pedagoga, maestra en música con énfasis en interpretación del canto.
+</p>
 
 <br>
 
-<p>Desarrolla procesos de formación instrumental, iniciación musical y trabajo en ensamble, garantizando experiencias musicales individuales y colectivas, conscientes y de calidad.</p>
+<p>Cuenta con amplia experiencia en formación vocal e iniciación musical con estudiantes de todas las edades. Orienta el aprendizaje en modalidad virtual a través de metodologías innovadoras y sensibles.</p>
 <br>
 <br>
 
-<p>Áreas: Guitarra, dirección de ensambles (avanzado)
+<p>Áreas: Canto, iniciación musical (avanzado)
 <br>
-Otras: Bajo, iniciación musical (intermedio), batería y piano (iniciación)</p>
+Otras: Piano, estimulación musical y musicoterapia (intermedio)</p>
 </div>

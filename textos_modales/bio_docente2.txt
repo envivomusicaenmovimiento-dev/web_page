@@ -1,15 +1,14 @@
 <div style="text-align: center;">
 
-<p>Guitarrista y docente, licenciado en Música con énfasis en interpretación de la guitarra.</p>
+<p>Director y fundador de ACEEMM.</p>
+<p>Pianista y pedagogo, licenciado en Música y magíster en Música con énfasis en interpretación del piano</p>
 
 <br>
 
-<p>Su experiencia abarca la enseñanza en el área de instrumento principal e iniciación musical con personas de todas las edades, incluyendo experiencia en educación para personas con discapacidad visual.</p>
-<br>
+<p>Acompaña procesos de formación instrumental, iniciación musical y práctica colectiva, con sólida experiencia en la dirección de ensambles y en la profundización del piano como instrumento principal, articulando el desarrollo técnico con la comprensión y la vivencia musical de manera integral.</p>
+
 <br>
 
-<p>Áreas: Guitarra (avanzado)
-<br>
-Otros: iniciación musical (intermedio); Bajo, ukelele y piano (iniciación)
-</p>
+<p>Áreas: piano, ensambles, iniciación, estimulación y aprestamiento musical (avanzado)</p>
+<p>Otros: guitarra, batería, ukelele, viola (intermedio); bajo y violín (iniciación)</p>
 </div>

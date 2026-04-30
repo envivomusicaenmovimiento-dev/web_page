@@ -1,14 +1,14 @@
 <div style="text-align: center;">
 
-<p>Tiplista y docente, Licenciada en Música con énfasis en interpretación del tiple.</p>
+<p>Pianista y docente, Licenciada en Música con énfasis en interpretación del piano.</p>
 
 <br>
 
-<p>Se especializa en el trabajo con primeras infancias a partir de la estimulación e iniciación musical, y en la formación instrumental, desde un enfoque cercano y creativo.</p>
+<p>Orienta procesos de formación instrumental e iniciación musical, promoviendo una formación técnica, creativa y expresiva que tiene en cuenta particularidades de cada entorno.</p>
 <br>
 <br>
 
-<p>Áreas: Tiple, estimulación e iniciación musical (avanzado)
+<p>Áreas: Piano (avanzado)
 <br>
-Otras: Cuatro, requinto, bandola (intermedio), guitarra y piano (iniciación)</p>
+Otras: Guitarra y bajo (iniciación)</p>
 </div>

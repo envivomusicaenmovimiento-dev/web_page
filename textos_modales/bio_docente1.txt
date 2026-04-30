@@ -1,14 +1,13 @@
 <div style="text-align: center;">
-
-<p>Flautista y docente, licenciada en Música con énfasis en interpretación de la flauta.</p>
+<p>Directora y fundadora de ACEEMM.</p>
+<p>Cantante y pedagoga. Licenciada en Música y Magíster en Música con énfasis en interpretación del canto.</p>
 
 <br>
 
-<p>Desarrolla procesos de estimulación, iniciación y profundización instrumental desde un enfoque integral, orientado a fortalecer una práctica musical consciente y de calidad.</p>
-<br>
+<p>Su práctica se centra en la exploración y profundización de la voz. 
+Cuenta con amplia experiencia en el trabajo con primeras infancias y procesos colectivos, desde una mirada pedagógica que integra enfoques alternativos y reconoce los intereses, motivaciones y particularidades de cada estudiante.</p>
 <br>
 
-<p>Áreas: flauta traversa, iniciación, estimulación y aprestamiento musical (avanzado)
-<br>
-Otros: piano, guitarra, ukelele, clarinete (intermedio)</p>
+<p>Áreas: canto, iniciación, estimulación y aprestamiento musical, dirección de ensambles (avanzado)</p>
+<p>Otros: piano (intermedio), guitarra y ukelele (iniciación)</p>
 </div>

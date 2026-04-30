@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="EnVivo, Música en Movimiento: Clases de canto, 
+        piano, batería y más. Formación musical integral en movimiento.">
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.webp" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.webp" />
+    <meta name="apple-mobile-web-app-title" content="EnVivo" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <title>EnVivo Música en Movimiento</title>
+    <style>
+        /* ========================================
+           ESTILOS GENERALES - MINIMALISTA
+        ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-family: 'Lato', sans-serif;
+            font-weight: 480;
+            overflow-x: hidden;
+            background: #a90303ff;
+            color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+        /* Aplica la fuente de "impacto" a los títulos */
+        h1, h2, h3, .section-title, .nav-link {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700; /* Negrita profesional */
+            letter-spacing: 1px; /* Espaciado sutil entre letras */
+        }
+
+        /* ========================================
+           PANTALLA DE CARGA
+        ======================================== */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.8s ease-out;
+        }
+
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #loading-video {
+            width: 800px;
+            height: 800px;
+        }
+        
+        .video-loader-element {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: transparent;
+        }
+
+                
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading-screen">
+        <div id="loading-video">
+            <video autoplay muted loop playsinline class="video-loader-element">
+                <source src="animaciones/construction_logo.mp4" type='video/mp4; codecs="hvc1"'>
+                <source src="animaciones/construction_logo.webm" type="video/webm">
+                Tu navegador no soporta video HTML5.
+            </video>
+        </div>
+    </div>
+
+    
+</body>
+</html>

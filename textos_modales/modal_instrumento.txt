@@ -1,12 +1,12 @@
 <br>
-<p>Cada proceso se construye de manera conjunta entre estudiante y docente, reconociendo sus intereses y particularidades, y promoviendo aprendizajes significativos en un ambiente de respeto y reconocimiento de las diferencias. El proceso es orientado por docentes especializados en cada instrumento, con formación y experiencia en el campo artístico y pedagógico.</p>
+<p>Espacio de formación individual enfocado en la profundización técnica e interpretativa de un instrumento. Busca fortalecer la relación personal con 	la experiencia artística.</p>
 <br>
-<p>Este espacio busca fortalecer las habilidades técnicas e interpretativas, así como la relación personal con la música y el arte, a través de la profundización en un instrumento.</p>
-<strong>Piano / Canto / Batería / Bajo / Guitarra / Ukelele / Violín / Violonchelo / Flauta traversa / Trompeta / Acordeón / entre otros.</strong>
+<p>Cada proceso se construye de manera conjunta entre estudiante y docente, reconociendo intereses y particularidades, y promoviendo aprendizajes significativos en un ambiente de respeto y valoración de las diferencias. Está orientado por docentes especializados en cada instrumento, con formación y experiencia en el campo artístico y pedagógico.</p>
 <br>
+<h4 style="text-align: center;">Piano / Canto / Batería / Bajo / Guitarra / Ukelele / Violín / Violonchelo / Flauta traversa / Trompeta / Acordeón / entre otros.</h4>
 <br>
-<p>O en un área específica:</p>
-<strong>Lecto-escritura avanzada / Armonía Funcional / Principios de Composición / Preparación para exámenes y audiciones.</strong>
+<p style="text-align: center;">O en un área específica:</p>
+<h4 style="text-align: center;">Lecto-escritura avanzada / Armonía Funcional / Principios de Composición / Preparación para exámenes y audiciones.</h4>
 <br>
 <br>
 <ul style="list-style: none; text-align: center;">

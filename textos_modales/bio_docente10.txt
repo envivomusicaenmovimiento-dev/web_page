@@ -1,15 +1,14 @@
 <div style="text-align: center;">
 
-<p>Cantante y pedagoga, maestra en música con énfasis en interpretación del canto.
-</p>
+<p>Guitarrista y pedagoga, Licenciada en Música con énfasis en interpretación de la guitarra.</p>
 
 <br>
 
-<p>Cuenta con amplia experiencia en formación vocal e iniciación musical con estudiantes de todas las edades. Orienta el aprendizaje en modalidad virtual a través de metodologías innovadoras y sensibles.</p>
+<p>Acompaña procesos en instrumento principal e iniciación musical, impulsando el desarrollo técnico, auditivo y expresivo de forma holística, respetuosa y flexible.</p>
 <br>
 <br>
 
-<p>Áreas: Canto, iniciación musical (avanzado)
+<p>Áreas: Guitarra, iniciación musical (avanzado)</p>
 <br>
-Otras: Piano, estimulación musical y musicoterapia (intermedio)</p>
+Otras: Piano, ukelele, cuatro, tiple (iniciación)</p>
 </div>
