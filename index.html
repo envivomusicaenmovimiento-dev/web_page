@@ -259,6 +259,14 @@
             color: rgb(255, 255, 255);
         }
 
+        .section-subtitle {
+            font-size: clamp(2em, 5vw, 1.8em);
+            text-align: center;
+            margin-top: -50px;
+            margin-bottom: 30px;
+            color: rgb(255, 255, 255);
+        }
+
         .text-box {
             background: #ffffff0e; 
             padding: 35px;
@@ -444,6 +452,91 @@
         }
 
         .teachers-navigation-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1140px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #artists-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            padding: 20px 0%;
+            width: 100%;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .artist-card {
+            flex: 0 0 320px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 24px;
+            cursor: pointer;
+            scroll-snap-align: center;
+            transition: all 0.5s ease;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            overflow: hidden; /* IMPORTANTE: Para que el fondo negro no sobresalga de los bordes redondeados */
+        }
+
+        .artist-card:hover { transform: scale(1.02) translateY(-10px); }
+
+        .artist-name {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            right: 25px;
+            top: auto;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        /* Contenedor de la biografía (Oculto por defecto) */
+        .artist-bio-text {
+            font-size: 0.85em;
+            font-weight: normal;
+            margin-top: 0;
+            opacity: 0;
+            max-height: 0;
+            transition: opacity 0.3s ease;
+            text-align: left;
+            line-height: 1.6;
+            overflow-y: hidden;
+        }
+
+        /* ESTADO EXPANDIDO (Al hacer clic) */
+        .artist-card.expanded .artist-name {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 24px;
+            background: rgba(70, 5, 5, 0.566); /* Fondo más sólido para leer bien */
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .artist-card.expanded .artist-bio-text {
+            opacity: 1;
+            max-height: 100%;
+            margin-top: 20px;
+            overflow-y: auto; /* Permite hacer scroll si el texto es muy largo */
+        }
+
+        .artists-navigation-wrapper {
             position: relative;
             width: 100%;
             max-width: 1140px;
@@ -795,10 +888,47 @@
 
         <section id="seccion5" class="section">
             <h1 class="section-title">Proyectos de creación: pedagogía, arte y territorio</h1>
-            
+                        
             <div class="zig-zag-row">
                 <div class="zig-zag-img" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('imagenes/fondo_proyectos1.webp');"></div>
                 <div class="text-box" data-text="proyectos1"></div>
+            </div>
+
+            <br>
+            <br>
+            <h2 class=".section-subtitle">Artistas Asociados</h2>
+            
+           <div class="artists-navigation-wrapper">
+                <button class="nav-arrow left-arrow hidden" onclick="scrollartists(-1)">&#10094;</button>
+
+                <div id="artists-container">
+                    <div class="artist-card" style="background-image:url('fotos_docentes/docente31.webp');" data-artist="31">
+                        <div class="artist-name">
+                            <p style="font-weight: bold;">Paula Samantha Díaz Montero</p>
+                            <div class="artist-bio-text"></div>
+                        </div>
+                    </div>
+                    <div class="artist-card" style="background-image:url('fotos_docentes/docente32.webp');" data-artist="32">
+                        <div class="artist-name">
+                            <p style="font-weight: bold;">Nibeth Adriana Duarte Camacho</p>
+                            <div class="artist-bio-text"></div>
+                        </div>
+                    </div>
+                    <div class="artist-card" style="background-image:url('fotos_docentes/docente33.webp');" data-artist="33">
+                        <div class="artist-name">
+                            <p style="font-weight: bold;">Mariana Camacho Ojeda</p>
+                            <div class="artist-bio-text"></div>
+                        </div>
+                    </div>
+                    <div class="artist-card" style="background-image:url('fotos_docentes/docente34.webp');" data-artist="34">
+                        <div class="artist-name">
+                            <p style="font-weight: bold;">Daniel Alejandro Quintero Castaño</p>
+                            <div class="artist-bio-text"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nav-arrow right-arrow" onclick="scrollartists(1)">&#10095;</button>
             </div>
             
             <div class="zig-zag-row reverse">
@@ -961,7 +1091,11 @@
             12: { name: "Alejandra Delgado", img: "fotos_docentes/modal_docente12.webp", bio: "textos_modales/bio_docente12.txt" },
             13: { name: "Henry Ramírez", img: "fotos_docentes/modal_docente13.webp", bio: "textos_modales/bio_docente13.txt" },
             14: { name: "José Guillermo Ospina", img: "fotos_docentes/modal_docente14.webp", bio: "textos_modales/bio_docente14.txt" },
-            15: { name: "Lucila Sánchez", img: "fotos_docentes/modal_docente15.webp", bio: "textos_modales/bio_docente15.txt" }
+            15: { name: "Lucila Sánchez", img: "fotos_docentes/modal_docente15.webp", bio: "textos_modales/bio_docente15.txt" },
+            31: { name: "Paula Samantha Díaz Montero", img: "fotos_docentes/modal_docente31.webp", bio: "textos_modales/bio_docente31.txt" },
+            32: { name: "Nibeth Adriana Duarte Camacho", img: "fotos_docentes/modal_docente32.webp", bio: "textos_modales/bio_docente32.txt" },
+            33: { name: "Mariana Camacho Ojeda", img: "fotos_docentes/modal_docente33.webp", bio: "textos_modales/bio_docente33.txt" },
+            34: { name: "Daniel Alejandro Quintero Castaño", img: "fotos_docentes/modal_docente34.webp", bio: "textos_modales/bio_docente34.txt" }
         };
 
         const clasesData = {
@@ -1070,9 +1204,11 @@
         });
 
         // MODALES (Apertura)
-        document.querySelectorAll('.teacher-card').forEach((card, index) => {
-            card.dataset.teacher = index + 1;
-            card.addEventListener('click', () => showTeacherModal(index + 1));
+        document.querySelectorAll('.teacher-card').forEach((card) => {
+            // Leemos el valor exacto que pusiste en el HTML (ej: "31" o "1")
+            const teacherId = parseInt(card.dataset.teacher); 
+            
+            card.addEventListener('click', () => showTeacherModal(teacherId));
         });
 
         document.querySelectorAll('.class-btn').forEach(btn => {
@@ -1139,6 +1275,19 @@
             const teacherModal = document.getElementById('teacher-modal');
             if (event.target === classModal) closeModal('class-modal');
             if (event.target === teacherModal) closeModal('teacher-modal');
+        });
+
+        // MODALES (Apertura y Expansión)
+        document.querySelectorAll('.artist-card').forEach((card) => {
+            card.addEventListener('click', function() {
+                // Opcional: Cierra las demás tarjetas si abres una nueva
+                document.querySelectorAll('.artist-card.expanded').forEach(expandedCard => {
+                    if(expandedCard !== this) expandedCard.classList.remove('expanded');
+                });
+                
+                // Expande o contrae la tarjeta clickeada
+                this.classList.toggle('expanded');
+            });
         });
 
         // FOOTER
@@ -1242,6 +1391,13 @@
                         .then(validateContent)
                         .then(content => {
                             teachersData[key].bio = content;
+                            
+                            // NUEVO: Si es un artista, inyectar el texto directamente en su tarjeta
+                            const artistCard = document.querySelector(`.artist-card[data-artist="${key}"]`);
+                            if (artistCard) {
+                                const bioDiv = artistCard.querySelector('.artist-bio-text');
+                                if (bioDiv) bioDiv.innerHTML = content;
+                            }
                         })
                         .catch(e => {
                             console.warn(`Error en docente ${key}:`, e.message);
@@ -1294,6 +1450,53 @@
                     const movimiento = (e.deltaX !== 0 ? e.deltaX : e.deltaY) * multiplicador;
 
                     teachersContainerEl.scrollBy({
+                        left: movimiento,
+                        behavior: 'auto' 
+                    });
+                }
+            }, { passive: false });
+        }
+
+        // ========== NAVEGACIÓN DE ARTISTAS ==========
+        function scrollartists(direction) {
+            const container = document.getElementById('artists-container');
+            const cardWidth = container.querySelector('.teacher-card')?.offsetWidth || 340;
+            container.scrollBy({ left: direction * (cardWidth + 20), behavior: 'smooth' });
+        }
+
+        function updateArrows() {
+            const container = document.getElementById('artists-container');
+            const leftArrow = document.querySelector('.left-arrow');
+            const rightArrow = document.querySelector('.right-arrow');
+            
+            if (!container || !leftArrow || !rightArrow) return;
+
+            if (container.clientWidth === 0) return;
+            
+            leftArrow.classList.toggle('hidden', container.scrollLeft <= 5);
+            const isAtEnd = Math.ceil(container.scrollLeft + container.clientWidth) >= container.scrollWidth - 5;
+            rightArrow.classList.toggle('hidden', isAtEnd);
+        }
+
+        // ========== NAVEGACIÓN Y ACELERADOR DE DOCENTES ==========
+        const artistsContainerEl = document.getElementById('artists-container');
+        
+        if (artistsContainerEl) {
+            // 1. Lo que ya tenías para las flechas:
+            artistsContainerEl.addEventListener('scroll', updateArrows);
+            setTimeout(updateArrows, 500);
+            window.addEventListener('resize', updateArrows);
+
+            // 2. Lo NUEVO para el scroll potente:
+            artistsContainerEl.addEventListener('wheel', (e) => {
+                const isHorizontalScroll = Math.abs(e.deltaX) > 0 || e.shiftKey;
+
+                if (isHorizontalScroll) {
+                    e.preventDefault();
+                    const multiplicador = 4; // Cambia este número para más o menos velocidad
+                    const movimiento = (e.deltaX !== 0 ? e.deltaX : e.deltaY) * multiplicador;
+
+                    artistsContainerEl.scrollBy({
                         left: movimiento,
                         behavior: 'auto' 
                     });
