@@ -1172,7 +1172,9 @@
 
             // Si abrimos la sección de docentes (la 6), recalculamos las flechas
             if (sectionNum === 6) {
-                setTimeout(updateArrows, 50); // Pequeño margen para que el DOM pinte el elemento antes de medirlo
+                setTimeout(updateTeacherArrows, 50); 
+            } else if (sectionNum === 5) {
+                setTimeout(updateArtistArrows, 50); 
             }
         }                           
 
@@ -1421,13 +1423,16 @@
             container.scrollBy({ left: direction * (cardWidth + 20), behavior: 'smooth' });
         }
 
-        function updateArrows() {
+        function updateTeacherArrows() {
+            const wrapper = document.querySelector('.teachers-navigation-wrapper');
             const container = document.getElementById('teachers-container');
-            const leftArrow = document.querySelector('.left-arrow');
-            const rightArrow = document.querySelector('.right-arrow');
             
-            if (!container || !leftArrow || !rightArrow) return;
+            if (!container || !wrapper) return;
 
+            // Busca las flechas específicamente DENTRO del wrapper de docentes
+            const leftArrow = wrapper.querySelector('.left-arrow');
+            const rightArrow = wrapper.querySelector('.right-arrow');
+            
             if (container.clientWidth === 0) return;
             
             leftArrow.classList.toggle('hidden', container.scrollLeft <= 5);
@@ -1435,28 +1440,20 @@
             rightArrow.classList.toggle('hidden', isAtEnd);
         }
 
-        // ========== NAVEGACIÓN Y ACELERADOR DE DOCENTES ==========
         const teachersContainerEl = document.getElementById('teachers-container');
         
         if (teachersContainerEl) {
-            // 1. Lo que ya tenías para las flechas:
-            teachersContainerEl.addEventListener('scroll', updateArrows);
-            setTimeout(updateArrows, 500);
-            window.addEventListener('resize', updateArrows);
+            teachersContainerEl.addEventListener('scroll', updateTeacherArrows);
+            setTimeout(updateTeacherArrows, 500);
+            window.addEventListener('resize', updateTeacherArrows);
 
-            // 2. Lo NUEVO para el scroll potente:
             teachersContainerEl.addEventListener('wheel', (e) => {
                 const isHorizontalScroll = Math.abs(e.deltaX) > 0 || e.shiftKey;
-
                 if (isHorizontalScroll) {
                     e.preventDefault();
-                    const multiplicador = 4; // Cambia este número para más o menos velocidad
+                    const multiplicador = 4;
                     const movimiento = (e.deltaX !== 0 ? e.deltaX : e.deltaY) * multiplicador;
-
-                    teachersContainerEl.scrollBy({
-                        left: movimiento,
-                        behavior: 'auto' 
-                    });
+                    teachersContainerEl.scrollBy({ left: movimiento, behavior: 'auto' });
                 }
             }, { passive: false });
         }
@@ -1464,17 +1461,20 @@
         // ========== NAVEGACIÓN DE ARTISTAS ==========
         function scrollartists(direction) {
             const container = document.getElementById('artists-container');
-            const cardWidth = container.querySelector('.teacher-card')?.offsetWidth || 340;
+            const cardWidth = container.querySelector('.artist-card')?.offsetWidth || 340;
             container.scrollBy({ left: direction * (cardWidth + 20), behavior: 'smooth' });
         }
 
-        function updateArrows() {
+        function updateArtistArrows() {
+            const wrapper = document.querySelector('.artists-navigation-wrapper');
             const container = document.getElementById('artists-container');
-            const leftArrow = document.querySelector('.left-arrow');
-            const rightArrow = document.querySelector('.right-arrow');
             
-            if (!container || !leftArrow || !rightArrow) return;
+            if (!container || !wrapper) return;
 
+            // Busca las flechas específicamente DENTRO del wrapper de artistas
+            const leftArrow = wrapper.querySelector('.left-arrow');
+            const rightArrow = wrapper.querySelector('.right-arrow');
+            
             if (container.clientWidth === 0) return;
             
             leftArrow.classList.toggle('hidden', container.scrollLeft <= 5);
@@ -1482,28 +1482,20 @@
             rightArrow.classList.toggle('hidden', isAtEnd);
         }
 
-        // ========== NAVEGACIÓN Y ACELERADOR DE DOCENTES ==========
         const artistsContainerEl = document.getElementById('artists-container');
         
         if (artistsContainerEl) {
-            // 1. Lo que ya tenías para las flechas:
-            artistsContainerEl.addEventListener('scroll', updateArrows);
-            setTimeout(updateArrows, 500);
-            window.addEventListener('resize', updateArrows);
+            artistsContainerEl.addEventListener('scroll', updateArtistArrows);
+            setTimeout(updateArtistArrows, 500);
+            window.addEventListener('resize', updateArtistArrows);
 
-            // 2. Lo NUEVO para el scroll potente:
             artistsContainerEl.addEventListener('wheel', (e) => {
                 const isHorizontalScroll = Math.abs(e.deltaX) > 0 || e.shiftKey;
-
                 if (isHorizontalScroll) {
                     e.preventDefault();
-                    const multiplicador = 4; // Cambia este número para más o menos velocidad
+                    const multiplicador = 4; 
                     const movimiento = (e.deltaX !== 0 ? e.deltaX : e.deltaY) * multiplicador;
-
-                    artistsContainerEl.scrollBy({
-                        left: movimiento,
-                        behavior: 'auto' 
-                    });
+                    artistsContainerEl.scrollBy({ left: movimiento, behavior: 'auto' });
                 }
             }, { passive: false });
         }
